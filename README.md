@@ -70,7 +70,8 @@ Your Name - Kye Gomez
 
 
 # Todo
-- [ ] Add setup.py 
+- [ ] Add setup.py synchronization as well
+
 
 
 

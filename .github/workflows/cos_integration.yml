@@ -27,10 +27,10 @@ jobs:
         run: pytest tests/integration
 
       - name: Run code coverage
-        run: pytest --cov=swarms tests/
+        run: pytest --cov=synchronx tests/
 
       - name: Run linters
-        run: pylint swarms
+        run: pylint synchronx
 
       - name: Build documentation
         run: make docs
