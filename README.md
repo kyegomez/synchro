@@ -1,107 +1,76 @@
 [![Multi-Modality](agorabanner.png)](https://discord.gg/qUtxnK2NMf)
 
-# Python Package Template
-A easy, reliable, fluid template for python packages complete with docs, testing suites, readme's, github workflows, linting and much much more
 
+# Synchro: Synchronize Your Python Project Dependencies Effortlessly
 
-## Installation
+## Elevate Your Development Workflow
 
-You can install the package using pip
+Are you tired of manually synchronizing `requirements.txt` and `pyproject.toml` for your Python projects? Say goodbye to the tedious and error-prone process of keeping your dependency files in sync. Synchro is here to make your life easier!
+
+Synchro is a cutting-edge command-line tool that seamlessly synchronizes your project's dependencies. With Synchro, you can ensure that your `requirements.txt` and `pyproject.toml` files are always perfectly aligned, saving you time and reducing the risk of version conflicts.
+
+## Quick Installation
+
+Get started with Synchro in no time! Install it directly from PyPI:
 
 ```bash
-pip install -e .
-```
-## Structure
-```
-├── LICENSE
-├── Makefile
-├── README.md
-├── agorabanner.png
-├── example.py
-├── package
-│   ├── __init__.py
-│   ├── main.py
-│   └── subfolder
-│       ├── __init__.py
-│       └── main.py
-├── pyproject.toml
-└── requirements.txt
-
-2 directories, 11 files
-```
-# Usage
-
-# Documentation
-
-
-### Code Quality 🧹
-
-We provide two handy commands inside the `Makefile`, namely:
-
-- `make style` to format the code
-- `make check_code_quality` to check code quality (PEP8 basically)
-
-So far, **there is no types checking with mypy**. See [issue](https://github.com/roboflow-ai/template-python/issues/4). 
-
-### Tests 🧪
-
-[`pytests`](https://docs.pytest.org/en/7.1.x/) is used to run our tests.
-
-### Publish on PyPi 🚀
-
-**Important**: Before publishing, edit `__version__` in [src/__init__](/src/__init__.py) to match the wanted new version.
-
-We use [`twine`](https://twine.readthedocs.io/en/stable/) to make our life easier. You can publish by using
-
-```
-export PYPI_USERNAME="you_username"
-export PYPI_PASSWORD="your_password"
-export PYPI_TEST_PASSWORD="your_password_for_test_pypi"
-make publish -e PYPI_USERNAME=$PYPI_USERNAME -e PYPI_PASSWORD=$PYPI_PASSWORD -e PYPI_TEST_PASSWORD=$PYPI_TEST_PASSWORD
+pip install synchronx
 ```
 
-You can also use token for auth, see [pypi doc](https://pypi.org/help/#apitoken). In that case,
+## Simple Usage
 
+Running Synchro is as easy as executing a single command:
+
+```bash
+synchro
 ```
-export PYPI_USERNAME="__token__"
-export PYPI_PASSWORD="your_token"
-export PYPI_TEST_PASSWORD="your_token_for_test_pypi"
-make publish -e PYPI_USERNAME=$PYPI_USERNAME -e PYPI_PASSWORD=$PYPI_PASSWORD -e PYPI_TEST_PASSWORD=$PYPI_TEST_PASSWORD
+
+Synchro intelligently scans your `requirements.txt` and `pyproject.toml` files, aligns the versions, and updates them as needed. Say hello to streamlined and hassle-free dependency management!
+
+## Features
+
+- **Automatic Synchronization**: Effortlessly syncs `requirements.txt` and `pyproject.toml`.
+- **Backup Creation**: Automatically creates backups before making changes.
+- **Customization**: Supports custom file paths and non-interactive modes for advanced users.
+- **User Confirmation**: Prompts for confirmation before applying changes, ensuring control over your project.
+- **Colored Output**: Enhances the user experience with visually distinct output messages.
+
+## Advanced Usage
+
+Customize the synchronization process to fit your workflow:
+
+```bash
+# Specify custom file paths
+synchro --requirements path/to/requirements.txt --pyproject path/to/pyproject.toml
+
+# Skip backup creation
+synchro --no-backup
+
+# Run in non-interactive mode
+synchro --non-interactive
 ```
 
-**Note**: We will try to push to [test pypi](https://test.pypi.org/) before pushing to pypi, to assert everything will work
+## Contributing
 
-### CI/CD 🤖
+Your contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-We use [GitHub actions](https://github.com/features/actions) to automatically run tests and check code quality when a new PR is done on `main`.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-On any pull request, we will check the code quality and tests.
+## License
 
-When a new release is created, we will try to push the new code to PyPi. We use [`twine`](https://twine.readthedocs.io/en/stable/) to make our life easier. 
+Distributed under the MIT License. See `LICENSE` for more information.
 
-The **correct steps** to create a new realease are the following:
-- edit `__version__` in [src/__init__](/src/__init__.py) to match the wanted new version.
-- create a new [`tag`](https://git-scm.com/docs/git-tag) with the release name, e.g. `git tag v0.0.1 && git push origin v0.0.1` or from the GitHub UI.
-- create a new release from GitHub UI
+## Contact
 
-The CI will run when you create the new release.
+Your Name - Kye Gomez
 
-# Docs
-We use MK docs. This repo comes with the zeta docs. All the docs configurations are already here along with the readthedocs configs
 
-# Q&A
-
-## Why no cookiecutter?
-This is a template repo, it's meant to be used inside GitHub upon repo creation.
-
-## Why reinvent the wheel?
-
-There are several very good templates on GitHub, I prefer to use code we wrote instead of blinding taking the most starred template and having features we don't need. From experience, it's better to keep it simple and general enough for our specific use cases.
-
-# Architecture
-
-# License
-MIT
+# Todo
+- [ ] Add setup.py 
 
 
 

@@ -1,4 +1,4 @@
-from synchro.main import Synchro
+from synchronx.main import Synchro
 
 sync = Synchro()
 
