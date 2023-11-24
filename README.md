@@ -65,8 +65,7 @@ Your contributions are what make the open-source community such an amazing place
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
-
-Your Name - Kye Gomez
+[Join the Agora discord!](https://discord.gg/qxN6y7MAzb)
 
 
 # Todo
